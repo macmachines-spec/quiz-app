@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1f0036, #0d0d2b, #003333);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.quiz-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  width: 90%;
+  max-width: 540px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 30px;
+  color: #00f5d4;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 28px;
+}
+
+#welcome-box p {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+#play-btn {
+  padding: 16px 48px;
+  background: linear-gradient(135deg, #00f5d4, #7b2ff7);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+#play-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+#progress-text {
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+#question-text {
+  font-size: 18px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+.timer-bar-wrap {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  height: 10px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+
+.timer-bar {
+  height: 10px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #00f5d4, #7b2ff7);
+  width: 100%;
+  transition: width 1s linear;
+}
+
+.timer-label {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+#timer-num {
+  color: #00f5d4;
+  font-weight: bold;
+}
+
+#answer-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.answer-btn {
+  padding: 14px;
+  border: 1.5px solid #7b2ff7;
+  background: transparent;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.answer-btn:hover {
+  background: rgba(123, 47, 247, 0.3);
+  transform: scale(1.02);
+}
+
+#result-box h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #00f5d4;
+}
+
+#restart-btn {
+  margin-top: 20px;
+  padding: 12px 34px;
+  background: linear-gradient(135deg, #00f5d4, #7b2ff7);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#restart-btn:hover {
+  transform: scale(1.05);
+}
