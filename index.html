@@ -6,17 +6,37 @@
   <title>Quiz App</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
   <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Noto+Sans+Arabic&family=Noto+Sans+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
 
   <div class="quiz-container">
     <h1>Quiz App</h1>
-    <p class="subtitle">Test your general knowledge</p>
+    <p class="subtitle" id="subtitle-text">Test your general knowledge</p>
 
     <div id="welcome-box">
-      <p>50 questions. 30 seconds each.<br>How well do you know the world?</p>
-      <button id="play-btn">Play Now</button>
-    </div>
+  <p id="welcome-text">50 questions. 30 seconds each.<br>How well do you know the world?</p>
+  <div id="lang-selector">
+    <p id="lang-label">Choose your language</p>
+<div id="lang-grid">
+  <button class="lang-btn active" data-lang="en"><div class="flag-box" style="background:linear-gradient(135deg,#012169,#C8102E)">EN</div><span>English</span></button>
+  <button class="lang-btn" data-lang="fr"><div class="flag-box" style="background:linear-gradient(135deg,#002395,#ED2939)">FR</div><span>French</span></button>
+  <button class="lang-btn" data-lang="es"><div class="flag-box" style="background:linear-gradient(135deg,#AA151B,#F1BF00)">ES</div><span>Spanish</span></button>
+  <button class="lang-btn" data-lang="ar"><div class="flag-box" style="background:linear-gradient(135deg,#006C35,#FFFFFF)">AR</div><span>Arabic</span></button>
+  <button class="lang-btn" data-lang="pt"><div class="flag-box" style="background:linear-gradient(135deg,#006600,#FF0000)">PT</div><span>Portuguese</span></button>
+  <button class="lang-btn" data-lang="ro"><div class="flag-box" style="background:linear-gradient(135deg,#002B7F,#FCD116)">RO</div><span>Romanian</span></button>
+  <button class="lang-btn" data-lang="it"><div class="flag-box" style="background:linear-gradient(135deg,#009246,#CE2B37)">IT</div><span>Italian</span></button>
+  <button class="lang-btn" data-lang="ig"><div class="flag-box" style="background:linear-gradient(135deg,#008751,#FFFFFF)">IG</div><span>Igbo</span></button>
+  <button class="lang-btn" data-lang="de"><div class="flag-box" style="background:linear-gradient(135deg,#000000,#DD0000)">DE</div><span>German</span></button>
+  <button class="lang-btn" data-lang="zh"><div class="flag-box" style="background:linear-gradient(135deg,#DE2910,#FFDE00)">ZH</div><span>Chinese</span></button>
+  <button class="lang-btn" data-lang="nl"><div class="flag-box" style="background:linear-gradient(135deg,#AE1C28,#21468B)">NL</div><span>Dutch</span></button>
+  <button class="lang-btn" data-lang="hi"><div class="flag-box" style="background:linear-gradient(135deg,#FF9933,#138808)">HI</div><span>Hindi</span></button>
+</div>
+  </div>
+  <button id="play-btn">Play Now</button>
+</div>
 
     <div id="question-box" style="display:none;">
       <p id="progress-text">Question 1 of 50</p>
@@ -45,7 +65,9 @@
     </div>
 
   </div>
-
+<div id="celebration" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:999; pointer-events:none;">
+  <canvas id="confetti-canvas" style="width:100%; height:100%;"></canvas>
+</div>
   <script src="script.js"></script>
 </body>
 </html>
