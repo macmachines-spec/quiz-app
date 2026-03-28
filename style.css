@@ -147,3 +147,106 @@ h1 {
 #restart-btn:hover {
   transform: scale(1.05);
 }
+#celebration-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #00f5d4, #7b2ff7);
+  color: white;
+  padding: 30px 50px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 1000;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  0% { transform: translate(-50%, -50%) scale(0); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+#celebration-message h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+#celebration-message p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+#lang-selector {
+  margin-bottom: 24px;
+}
+
+#lang-label {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+#lang-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.lang-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 6px;
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: white;
+}
+
+.flag-box {
+  width: 42px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.lang-btn span {
+  font-size: 10px;
+  font-weight: 500;
+  color: #aaa;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.lang-btn:hover {
+  border-color: #00f5d4;
+  background: rgba(0, 245, 212, 0.1);
+}
+
+.lang-btn.active {
+  border-color: #00f5d4;
+  background: rgba(0, 245, 212, 0.15);
+}
+
+.lang-btn.active span {
+  color: #00f5d4;
+}
+
+body[dir="rtl"] .quiz-container {
+  direction: rtl;
+  text-align: right;
+}
+
+body[dir="rtl"] #answer-buttons {
+  direction: rtl;
+}
